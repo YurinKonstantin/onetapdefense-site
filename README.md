@@ -27,14 +27,16 @@
 ## Технически
 
 - Чистый HTML + CSS, без сборки, без JavaScript, без внешних CDN — сайт работает офлайн и без cookies.
-- Хостинг: GitHub Pages, ветка `main`, каталог `/` (в корне репозитория).
+- Хостинг: GitHub Pages. Публикация — workflow `.github/workflows/pages.yml`
+  (Actions → upload-pages-artifact → deploy-pages), запускается на каждый push в `main`.
 - Графика в `assets/img/` собрана скриптом `tools/site_assets.py` из материалов `store/` игры.
 
 ## Обновление
 
 1. Правки — в `index.html`, `en.html`, `privacy.html`, `privacy-en.html`, `assets/css/style.css`.
 2. При изменении политики конфиденциальности обновить дату вступления в силу и `lastmod` в `sitemap.xml`.
-3. Коммит и пуш в `main`; GitHub Pages пересобирается автоматически за 1–2 минуты.
+3. Коммит и пуш в `main`: Actions пересобирает и публикует сайт за 30–60 секунд
+   (проверить: `gh run list --limit 3` в этой папке).
 
 ## Лицензия
 
