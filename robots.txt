@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yurinkonstantin.github.io/onetapdefense-site/sitemap.xml
